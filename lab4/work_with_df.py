@@ -1,7 +1,6 @@
 import cv2
-import os
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
 
 
 def create_df(annotation_file: str) -> pd.DataFrame:
@@ -10,24 +9,25 @@ def create_df(annotation_file: str) -> pd.DataFrame:
     :param annotation_file: path to annotation file
     :return: DataFrame
     """
-    return pd.read_csv(annotation_file)
+    df = pd.read_csv(annotation_file)
+    df.columns=['Abspath', 'Relpath']
+    return df
 
 
-def add_h_w_d(df: pd.DataFrame, path_to_images: str) -> None:
+def add_h_w_d(df: pd.DataFrame) -> None:
     """
     Add columns: height, width, depth
     :param df: Original DataFrame
-    :param path_to_images: path to dir with images
     :return: None
     """
     h = []
     w = []
     d = []
-    for i in os.listdir(path_to_images):
-        img = os.path.join(path_to_images, i)
-        h.append(cv2.imread(img).shape[0])
-        w.append(cv2.imread(img).shape[1])
-        d.append(cv2.imread(img).shape[2])
+    for i in df["Relpath"]:
+        sizes = cv2.imread(i).shape
+        h.append(sizes[0])
+        w.append(sizes[1])
+        d.append(sizes[2])
 
     df.insert(2, "Height", pd.Series(h), True)
     df.insert(3, "Width", pd.Series(w), True)
@@ -40,7 +40,7 @@ def statistical_information(df: pd.DataFrame) -> pd.DataFrame:
     :param df: DataFrame to statistic
     :return: Statistical information of columns: height, width, depth
     """
-    return df.loc[:, ("Height", "Width", "Depth")].agg(["min", "max", "mean"])
+    return df.loc[:, ("Height", "Width", "Depth")].describe()
 
 
 def filter_df_by_hw(df: pd.DataFrame, max_height: float, max_width: float) -> pd.DataFrame:
