@@ -18,6 +18,9 @@ from ImageIterator import ImageIterator
 class MyWindow(QWidget):
 
     def __init__(self):
+        '''
+        Initialize the main window.
+        '''
         super().__init__()
 
         self.iterator = None
@@ -26,6 +29,9 @@ class MyWindow(QWidget):
         self.init_ui()
 
     def init_ui(self) -> None:
+        '''
+        Set up the interface.
+        '''
 
         self.setGeometry(100, 100, 700, 500)
         self.setFixedSize(700, 500)
@@ -61,6 +67,9 @@ class MyWindow(QWidget):
         self.setLayout(vbox)
 
     def open_csv(self) -> None:
+        '''
+        Open a file dialog to select an annotation file.
+        '''
         fname = QFileDialog.getOpenFileName(self,
                                             'Open file',
                                             '/ann',
@@ -74,6 +83,9 @@ class MyWindow(QWidget):
                 QMessageBox.critical(self, f"Error: {str(e)}")
 
     def show_next_img(self) -> None:
+        '''
+        Display the next image in the dataset.
+        '''
         if self.iterator:
             try:
                 self.path = next(self.iterator)
