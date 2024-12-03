@@ -1,0 +1,65 @@
+Index: lab2/ImageIterator.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import csv\r\nimport os\r\n\r\n\r\nclass ImageIterator:\r\n    def __init__(self, path: str):\r\n        self.path = path\r\n        self.annotation = self.read_file(self.path)\r\n        self.limit = len(self.annotation)\r\n        self.counter = 0\r\n\r\n    def __iter__(self):\r\n        return self\r\n\r\n    def __next__(self):\r\n        if self.counter < self.limit:\r\n            next_el = self.annotation[self.counter]\r\n            self.counter += 1\r\n            return next_el\r\n        else:\r\n            raise StopIteration\r\n\r\n    def read_file(self, path: str) -> list:\r\n        with open(self.path, mode='r', encoding='utf-8') as file:\r\n            reader = csv.reader(file)\r\n            next(reader)  # skip the header\r\n            list_of_pic = list(row[1] for row in reader)\r\n            return list_of_pic\r\n
+===================================================================
+diff --git a/lab2/ImageIterator.py b/lab2/ImageIterator.py
+--- a/lab2/ImageIterator.py	(revision 6e52a21db1bbb4b96b77fd612781072fa01da0a8)
++++ b/lab2/ImageIterator.py	(date 1729336841677)
+@@ -1,11 +1,10 @@
+ import csv
+-import os
+ 
+ 
+ class ImageIterator:
+     def __init__(self, path: str):
+         self.path = path
+-        self.annotation = self.read_file(self.path)
++        self.annotation = self.__read_file()
+         self.limit = len(self.annotation)
+         self.counter = 0
+ 
+@@ -20,7 +19,7 @@
+         else:
+             raise StopIteration
+ 
+-    def read_file(self, path: str) -> list:
++    def __read_file(self) -> list:
+         with open(self.path, mode='r', encoding='utf-8') as file:
+             reader = csv.reader(file)
+             next(reader)  # skip the header
+Index: lab2/main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import argparse\r\nfrom download_image import download_images\r\nimport ImageIterator\r\nfrom make_csv import create_csvfile\r\n\r\n\r\ndef get_input_info() -> tuple:\r\n    \"\"\"\r\n    Parsing the arguments of command line\r\n    :return: tuple of name od directory, request, name of annotation file\r\n    \"\"\"\r\n    parser = argparse.ArgumentParser()\r\n    parser.add_argument('name_dir', type=str, help='name dir')\r\n    parser.add_argument('request', type=str, help='request')\r\n    parser.add_argument('annotation_file', type=str, help='annotation_file')\r\n    args = parser.parse_args()\r\n    dir_name, request, annotation_file = args.name_dir, args.request, args.annotation_file\r\n    return dir_name, request, annotation_file\r\n\r\n\r\ndef main():\r\n    try:\r\n        dir_name, request, annotation_file = get_input_info()\r\n        download_images(dir_name, request, 1000)\r\n        create_csvfile(dir_name, annotation_file)\r\n        iterator = ImageIterator.ImageIterator(annotation_file)\r\n        for i in iterator:\r\n            print(i)\r\n\r\n    except Exception as e:\r\n        print(f\"Error: {e}\")\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n
+===================================================================
+diff --git a/lab2/main.py b/lab2/main.py
+--- a/lab2/main.py	(revision 6e52a21db1bbb4b96b77fd612781072fa01da0a8)
++++ b/lab2/main.py	(date 1729336269458)
+@@ -1,6 +1,8 @@
+ import argparse
+-from download_image import download_images
++
+ import ImageIterator
++
++from download_image import download_images
+ from make_csv import create_csvfile
+ 
+ 
+Index: lab2/make_csv.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import csv\r\nimport os\r\nimport os.path as op\r\n\r\n\r\ndef create_csvfile(dir_name: str, annotation_file: str) -> None:\r\n    \"\"\"\r\n    Creating csv-file with annotation\r\n    :param dir_name: name of directory with pictures\r\n    :param annotation_file: name of file to save annotation\r\n    :return:\r\n    \"\"\"\r\n    with open(annotation_file, mode='a', newline='', encoding='utf-8') as file:\r\n        writer = csv.writer(file)\r\n        writer.writerow([\"Absolute path\", \"relative path\"])\r\n        list_of_pictures = os.listdir(dir_name)\r\n        for i in list_of_pictures:\r\n            a = op.abspath(op.join(dir_name, i))\r\n            r = op.relpath(op.join(dir_name, i), start=\".\")\r\n            writer.writerow([a, r])\r\n
+===================================================================
+diff --git a/lab2/make_csv.py b/lab2/make_csv.py
+--- a/lab2/make_csv.py	(revision 6e52a21db1bbb4b96b77fd612781072fa01da0a8)
++++ b/lab2/make_csv.py	(date 1729336430807)
+@@ -10,7 +10,7 @@
+     :param annotation_file: name of file to save annotation
+     :return:
+     """
+-    with open(annotation_file, mode='a', newline='', encoding='utf-8') as file:
++    with open(annotation_file, mode='w', newline='', encoding='utf-8') as file:
+         writer = csv.writer(file)
+         writer.writerow(["Absolute path", "relative path"])
+         list_of_pictures = os.listdir(dir_name)

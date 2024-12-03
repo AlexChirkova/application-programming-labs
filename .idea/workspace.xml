@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d6ce6539-1ecd-4ee3-9419-e82a57682220" name="Changes" comment="Imports arranged in alphabetical order;&#10;added column naming function;&#10;the path to the images is taken from the csv-file;&#10;the image is read once;&#10;descride() is used instead agg()">
+      <change afterPath="$PROJECT_DIR$/lab5/ImageIterator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab5/main_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab5/mw.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AlexChirkova/application-programming-labs.git&quot;,
+    &quot;accountId&quot;: &quot;bec55f5f-9590-4175-913a-4ed5ec01d645&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2mFSNEY9WwEl4AIVQlPu5h3geXs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.get_image.executor": "Run",
+    "Python.icrawler_images.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main_window.executor": "Run",
+    "Python.mw.executor": "Run",
+    "Python.work_with_df.executor": "Run",
+    "Python.workimage.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "lab5-var6",
+    "last_opened_file_path": "C:/Users/Sasha Sherwood/PycharmProjects/application programming 3 sem/lab3",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sasha Sherwood\PycharmProjects\application-programming-labs\lab4" />
+      <recent name="C:\Users\Sasha Sherwood\PycharmProjects\application-programming-labs\lab3\images" />
+      <recent name="C:\Users\Sasha Sherwood\PycharmProjects\application-programming-labs\lab1" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6ce6539-1ecd-4ee3-9419-e82a57682220" name="Changes" comment="" />
+      <created>1726670789095</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726670789095</updated>
+    </task>
+    <task id="LOCAL-00001" summary="test">
+      <option name="closed" value="true" />
+      <created>1726675081457</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726675081457</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Entering the file name via the cmd.">
+      <option name="closed" value="true" />
+      <created>1726689108979</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726689108979</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added functions for reading information from a file, searching for women among people, and searching for names starting with the letter a among women's names">
+      <option name="closed" value="true" />
+      <created>1726868289422</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726868289422</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;+ &quot;.txt&quot;&quot; was deleted">
+      <option name="closed" value="true" />
+      <created>1727288473352</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727288473352</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added functions:&#10;1. for parsing command line arguments &#10;2. downloading images using the icrawler&#10;3. Creating a csv file&#10;and iterator class">
+      <option name="closed" value="true" />
+      <created>1728906367524</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728906367524</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added comments on the functions">
+      <option name="closed" value="true" />
+      <created>1729020322762</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729020322762</updated>
+    </task>
+    <task id="LOCAL-00007" summary="The functions are separated into different modules.&#10;Missing data types of function parameters are specified.&#10;The alphabetical order in imports.">
+      <option name="closed" value="true" />
+      <created>1729256236484</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729256236484</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added module for process images: calculating histogram and reflect image">
+      <option name="closed" value="true" />
+      <created>1730197405820</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730197405820</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added main module.">
+      <option name="closed" value="true" />
+      <created>1730197458769</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730197458769</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Images for task">
+      <option name="closed" value="true" />
+      <created>1730197556500</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730197556500</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added requirements.txt">
+      <option name="closed" value="true" />
+      <created>1730197673402</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730197673402</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Data to process">
+      <option name="closed" value="true" />
+      <created>1730832715562</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730832715562</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Module to solve task">
+      <option name="closed" value="true" />
+      <created>1730832815332</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1730832815332</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Main module">
+      <option name="closed" value="true" />
+      <created>1730832841465</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730832841465</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added docstrings for functions">
+      <option name="closed" value="true" />
+      <created>1730833815619</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730833815619</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Imports arranged in alphabetical order;&#10;added column naming function;&#10;the path to the images is taken from the csv-file;&#10;the image is read once;&#10;descride() is used instead agg()">
+      <option name="closed" value="true" />
+      <created>1731106343964</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731106343964</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/lab1-var8" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <MESSAGE value="Entering the file name via the cmd." />
+    <MESSAGE value="Added functions for reading information from a file, searching for women among people, and searching for names starting with the letter a among women's names" />
+    <MESSAGE value="&quot;+ &quot;.txt&quot;&quot; was deleted" />
+    <MESSAGE value="Added functions:&#10;1. for parsing command line arguments &#10;2. downloading images using the icrawler&#10;3. Creating a csv file&#10;and iterator class" />
+    <MESSAGE value="Added comments on the functions" />
+    <MESSAGE value="The functions are separated into different modules.&#10;Missing data types of function parameters are specified.&#10;The alphabetical order in imports." />
+    <MESSAGE value="Added module for process images: calculating histogram and reflect image" />
+    <MESSAGE value="Added main module." />
+    <MESSAGE value="Images for task" />
+    <MESSAGE value="Added requirements.txt" />
+    <MESSAGE value="Data to process" />
+    <MESSAGE value="Module to solve task" />
+    <MESSAGE value="Main module" />
+    <MESSAGE value="Added docstrings for functions" />
+    <MESSAGE value="Imports arranged in alphabetical order;&#10;added column naming function;&#10;the path to the images is taken from the csv-file;&#10;the image is read once;&#10;descride() is used instead agg()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Imports arranged in alphabetical order;&#10;added column naming function;&#10;the path to the images is taken from the csv-file;&#10;the image is read once;&#10;descride() is used instead agg()" />
+  </component>
+</project>
