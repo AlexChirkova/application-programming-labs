@@ -75,8 +75,14 @@ class MyWindow(QWidget):
                 self.iterator = ImageIterator(fname)
                 self.next_btn.setEnabled(True)
                 self.show_next_img()
+
+            except StopIteration:
+                QMessageBox.critical(self, "Error", f"The file is empty.")
+
             except Exception as e:
-                QMessageBox.critical(self, "Error", f"Error: {str(e)}")
+                QMessageBox.critical(self, "Error", f"Error: {e}")
+
+
 
     def show_next_img(self) -> None:
         '''
@@ -104,8 +110,8 @@ class MyWindow(QWidget):
 
             except ValueError:
                 QMessageBox.information(self,
-                                                  "Error",
-                                                  "Path is incorrect")
+                                        "Error",
+                                        "Path is incorrect")
                 self.image_label.setText("Press \"Next img\" to continue viewing.")
 
             except Exception as e:
