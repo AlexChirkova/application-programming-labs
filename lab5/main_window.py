@@ -103,7 +103,7 @@ class MyWindow(QWidget):
                     self.next_btn.setEnabled(False)
 
             except ValueError:
-                is_next = QMessageBox.information(self,
+                QMessageBox.information(self,
                                                   "Error",
                                                   "Path is incorrect")
                 self.image_label.setText("Press \"Next img\" to continue viewing.")
